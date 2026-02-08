@@ -1,4 +1,4 @@
-# OneNex Task - Modern React Web Application
+# OneNex Task - Modern React Website
 
 A premium, interactive web application built with **React 19**, **Material UI**, and **Framer Motion**. This project showcases a modern design with dynamic sections, smooth animations, and a centralized theme system.
 
