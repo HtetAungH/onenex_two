@@ -28,6 +28,8 @@ A premium, interactive web application built with **React 19**, **Material UI**,
 - **Bundler**: [Vite 7](https://vitejs.dev/)
 - **UI Library**: [Material UI (v7)](https://mui.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **State Management**: [TanStack Query (React Query)](https://tanstack.com/query/latest)
+- **API Client**: [Axios](https://axios-http.com/)
 - **Styling**: Emotion (MUI) & Vanilla CSS
 - **Linting**: ESLint with React-specific configurations
 
@@ -113,6 +115,23 @@ The project uses a centralized theme system located in `src/theme.js`. It define
 - **Secondary Colors**: Cyan (`#00D9FF`) for accents and highlights.
 - **Backgrounds**: Custom gradients including `lavender` and `services`.
 - **Typography**: Optimized font hierarchy for readability and visual appeal.
+
+---
+
+## ⚙️ Technical Decisions
+
+### State Management & API Integration
+
+To meet the requirement of "proper state management around the API data", I chose **TanStack Query** (React Query) combined with **Axios**.
+
+- **Why TanStack Query?**: It provides a declarative way to handle loading, error, and caching states. This ensures a smooth user experience (UX) with features like optimistic updates and background fetching.
+- **Caching**: Data is cached for 5 minutes by default to reduce redundant network requests.
+- **UX**: Implemented **Loading Skeletons** using Material UI to prevent layout shifts and provide immediate visual feedback while data is fetching.
+- **Error Handling**: A dedicated error UI with a "Try Again" functionality ensures the app remains usable even during network failures.
+
+### Component Architecture
+
+The project follows a modular, feature-based structure. Shared logic, like API calls, is abstracted into custom hooks (`src/hooks`) to keep components clean and focused only on UI rendering.
 
 ---
 
