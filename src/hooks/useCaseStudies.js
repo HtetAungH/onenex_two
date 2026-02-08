@@ -29,18 +29,16 @@ const imageMap = [
 ];
 
 const fetchCaseStudies = async () => {
-  const { data } = await axios.get(
-    "https://jsonplaceholder.typicode.com/posts?_limit=12",
-  );
+  const { data } = await axios.get("https://dummyjson.com/posts?limit=12");
 
-  // Map API data to our UI structure
-  return data.map((post, index) => ({
+  // DummyJSON returns an object with a 'posts' array
+  return data.posts.map((post, index) => ({
     id: post.id,
     // Cycle through categories for variety
     category:
       index % 3 === 0 ? "app" : index % 3 === 1 ? "website" : "ecommerce",
     title: post.title.charAt(0).toUpperCase() + post.title.slice(1),
-    brand: `Partner ${post.userId}`,
+    brand: `Client ${post.userId}`,
     img: imageMap[index % imageMap.length],
     description: post.body,
   }));
