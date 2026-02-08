@@ -25,7 +25,7 @@ const Contact = () => {
           className="clickable"
           endIcon={<ArrowForwardIcon />}
           sx={{
-            color: "text.primary",
+            color: "secondary.main",
             px: 4,
             py: 1.5,
             borderWidth: "1px",
