@@ -1,0 +1,22 @@
+/* src/index.css */
+
+/* Hide default cursor and apply box-sizing globally */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Enable smooth scrolling for navigation links */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Set background color to Cream (#F2F2E6) */
+  background-color: #f2f2e6;
+  /* Prevent horizontal overflow issues */
+  overflow-x: hidden;
+  /* Set default font family for the project */
+  font-family: "Inter", sans-serif;
+}
