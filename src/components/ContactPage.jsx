@@ -35,7 +35,7 @@ const ContactPage = () => {
       <Grid container spacing={10} alignItems="center">
         <Grid sx={{ mb: { xs: 4, md: 30 } }} size={{ xs: 12, md: 6 }}>
           <Typography
-            variant="h1"
+            variant="h3"
             sx={{
               color: "primary.main",
             }}

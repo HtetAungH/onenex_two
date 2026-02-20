@@ -44,4 +44,47 @@ export const theme = createTheme({
       dimmed: "rgba(0,0,0,0.1)",
     },
   },
+  typography: {
+    fontFamily: '"Plus Jakarta Sans", "Inter", sans-serif',
+    h1: {
+      fontSize: "clamp(2.5rem, 8vw, 5rem)",
+      lineHeight: 1.1,
+      textTransform: "uppercase",
+    },
+    h2: {
+      fontSize: "clamp(2rem, 5vw, 3.5rem)",
+      lineHeight: 1.2,
+    },
+    h3: {
+      fontSize: "clamp(1.5rem, 4.5vw, 3rem)",
+      lineHeight: 1.3,
+      textTransform: "uppercase",
+    },
+    h4: {
+      fontSize: "clamp(1.25rem, 4vw, 2.5rem)",
+    },
+    h5: {
+      fontSize: "clamp(1rem, 2vw, 1.25rem)",
+      letterSpacing: "0.1em",
+      textTransform: "uppercase",
+    },
+    h6: {
+      fontSize: "clamp(0.9rem, 1.5vw, 1.1rem)",
+      lineHeight: 1.8,
+    },
+    body1: {
+      fontSize: "clamp(0.875rem, 1.2vw, 1rem)",
+      lineHeight: 1.8,
+    },
+    body2: {
+      fontSize: "0.875rem",
+      lineHeight: 1.6,
+    },
+    overline: {
+      letterSpacing: 3,
+
+      color: "rgba(0,0,0,0.6)",
+      textTransform: "uppercase",
+    },
+  },
 });

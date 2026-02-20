@@ -3,20 +3,25 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Contact = () => {
   return (
-    <Box sx={{ py: 12, textAlign: "center", bgcolor: "#F2F2E6" }}>
+    <Box
+      sx={{
+        py: { xs: 8, md: 15 },
+        textAlign: "center",
+        bgcolor: "background.default",
+      }}
+    >
       <Container maxWidth="md">
         <Typography
-          variant="h6"
+          variant="h5"
           display="block"
-          gutterBottom
           sx={{ mb: 2, color: "text.secondary" }}
         >
           SEEKING PARTNERS IN CHANGE?
         </Typography>
         <Typography
           variant="h2"
-          color="primary"
-          sx={{ mb: 6, fontWeight: 700 }}
+          color="primary.main"
+          sx={{ mb: { xs: 4, md: 6 }, fontWeight: 800 }}
         >
           Let's talk about <br /> your project.
         </Typography>
@@ -26,12 +31,16 @@ const Contact = () => {
           endIcon={<ArrowForwardIcon />}
           sx={{
             color: "secondary.main",
-            px: 4,
+            px: { xs: 3, md: 4 },
             py: 1.5,
             borderWidth: "1px",
-            fontSize: "0.9rem",
-            letterSpacing: "0.05em",
-            borderColor: "border.primary",
+            borderColor: "secondary.main",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              borderColor: "primary.main",
+              bgcolor: "rgba(0, 217, 255, 0.05)",
+              borderWidth: "1px",
+            },
           }}
         >
           GET IN TOUCH

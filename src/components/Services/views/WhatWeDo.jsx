@@ -44,7 +44,7 @@ const WhatWeDo = () => {
             transition={{ staggerChildren: 0.2 }}
           >
             <Typography
-              variant="h3"
+              variant="h4"
               component={motion.h3}
               variants={{
                 offscreen: {
@@ -70,7 +70,7 @@ const WhatWeDo = () => {
             </Typography>
 
             <Typography
-              variant="h3"
+              variant="h4"
               component={motion.h3}
               variants={{
                 offscreen: {

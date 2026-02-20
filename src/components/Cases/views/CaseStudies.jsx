@@ -41,9 +41,9 @@ const CaseStudies = () => {
     return (
       <Box
         sx={{
-          px: 10,
-          py: 20,
-          bgcolor: "#F2F2E6",
+          px: { xs: 3, md: 10 },
+          py: { xs: 10, md: 20 },
+          bgcolor: "background.default",
           minHeight: "100vh",
           textAlign: "center",
         }}
@@ -55,7 +55,7 @@ const CaseStudies = () => {
           variant="contained"
           startIcon={<RefreshIcon />}
           onClick={() => refetch()}
-          sx={{ bgcolor: "#000", "&:hover": { bgcolor: "#333" } }}
+          sx={{ bgcolor: "primary.main" }}
         >
           Try Again
         </Button>
@@ -64,36 +64,45 @@ const CaseStudies = () => {
   }
 
   return (
-    <Box sx={{ px: 10, py: 20, bgcolor: "#F2F2E6", minHeight: "100vh" }}>
+    <Box
+      sx={{
+        px: { xs: 3, md: 10 },
+        py: { xs: 10, md: 20 },
+        bgcolor: "background.default",
+        minHeight: "100vh",
+      }}
+    >
       {/* Filter Tabs */}
       <Box
         sx={{
           display: "flex",
-          gap: 6,
+          gap: { xs: 3, md: 6 },
           mb: 8,
-          borderBottom: "1px solid #000",
+          borderBottom: "1px solid",
+          borderColor: "common.black",
           pb: 2,
           overflowX: "auto",
           scrollbarWidth: "none",
+          "&::-webkit-scrollbar": { display: "none" },
         }}
       >
         {categories.map((cat) => (
           <Typography
             key={cat.id}
             onClick={() => setActiveTab(cat.id)}
-            variant="subtitle1"
+            variant="h6"
             sx={{
               cursor: "pointer",
               textTransform: "uppercase",
               display: "flex",
               alignItems: "center",
               gap: 1,
-              fontSize: "1.2rem",
               fontWeight: activeTab === cat.id ? 700 : 400,
-              color: activeTab === cat.id ? "#000" : "#888",
+              color: activeTab === cat.id ? "common.black" : "text.secondary",
               transition: "all 0.2s ease",
               whiteSpace: "nowrap",
-              "&:hover": { color: "#000" },
+              fontSize: { xs: "0.9rem", md: "1.1rem" },
+              "&:hover": { color: "common.black" },
             }}
           >
             {isLoading ? (
@@ -109,21 +118,27 @@ const CaseStudies = () => {
       </Box>
 
       {/* Case Studies Grid */}
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 15 }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: { xs: 8, md: 15 },
+        }}
+      >
         {isLoading ? (
           // Skeletons while loading
           [...Array(3)].map((_, i) => (
             <Grid
               container
               key={i}
-              spacing={8}
+              spacing={4}
               alignItems="center"
               direction={i % 2 === 0 ? "row" : "row-reverse"}
             >
               <Grid size={{ xs: 12, md: 6 }}>
                 <Skeleton
                   variant="rectangular"
-                  height={450}
+                  height={{ xs: 250, md: 450 }}
                   sx={{ borderRadius: 2 }}
                 />
               </Grid>
@@ -147,7 +162,7 @@ const CaseStudies = () => {
               <Grid
                 container
                 key={study.id}
-                spacing={8}
+                spacing={{ xs: 4, md: 8 }}
                 alignItems="center"
                 direction={isEven ? "row" : "row-reverse"}
               >
@@ -165,33 +180,35 @@ const CaseStudies = () => {
                       alt={study.title}
                       sx={{
                         width: "100%",
-                        height: "450px",
+                        height: { xs: "250px", md: "450px" },
                         display: "block",
                         transition: "transform 0.5s ease-out",
+                        objectFit: "cover",
                       }}
                     />
                   </Box>
                 </Grid>
 
                 <Grid size={{ xs: 12, md: 6 }}>
-                  <Box sx={{ [isEven ? "pl" : "pr"]: { md: 4 } }}>
+                  <Box
+                    sx={{
+                      pl: { xs: 0, md: isEven ? 4 : 0 },
+                      pr: { xs: 0, md: !isEven ? 4 : 0 },
+                      textAlign: { xs: "left", md: "inherit" },
+                    }}
+                  >
                     <Typography
                       variant="h3"
                       sx={{
-                        fontWeight: 600,
-                        fontSize: { xs: "2rem", md: "2.75rem" },
                         lineHeight: 1.1,
-                        mb: 3,
-                        color: "#000",
+                        mb: 2,
+                        color: "common.black",
                         letterSpacing: "-0.02em",
                       }}
                     >
                       {study.title}
                     </Typography>
-                    <Typography
-                      variant="h5"
-                      sx={{ fontWeight: 500, color: "#333" }}
-                    >
+                    <Typography variant="h5" sx={{ color: "text.secondary" }}>
                       {study.brand}
                     </Typography>
                   </Box>

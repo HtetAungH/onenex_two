@@ -38,14 +38,17 @@ function App() {
       </Box>
       <Footer
         sx={{
-          position: "fixed",
+          position: { xs: "relative", md: "fixed" },
           bottom: 0,
           left: 0,
           right: 0,
           zIndex: 1,
         }}
       />
-      <Footer sx={{ visibility: "hidden" }} />
+      {/* Redundant footer to reserve space - only show on desktop where real footer is fixed */}
+      <Box sx={{ display: { xs: "none", md: "block" } }}>
+        <Footer sx={{ visibility: "hidden" }} />
+      </Box>
     </ThemeProvider>
   );
 }

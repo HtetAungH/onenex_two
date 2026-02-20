@@ -51,32 +51,30 @@ const Hero = () => {
         sx={{
           position: "relative",
           width: "100%",
-          maxWidth: "lg", // Equivalent to Container's maxWidth="lg"
-          mx: "auto", // Center the Box horizontally
+          maxWidth: "lg",
+          mx: "auto",
+          px: { xs: 4, md: 0 },
         }}
       >
         <Typography
-          variant="h1"
+          variant="h3"
           sx={{
-            fontWeight: 500,
             color: theme.palette.text.secondary,
-            fontSize: { xs: "2.5rem", md: "4rem" },
             lineHeight: 1.1,
-            textAlign: "left",
-            width: "120%",
+            textAlign: { xs: "center", md: "left" },
+            width: { xs: "100%", md: "120%" },
           }}
         >
           We are in the business of building capabilities for our clients,
         </Typography>
 
         <Typography
-          variant="h1"
+          variant="h3"
           sx={{
-            fontWeight: 500,
             color: theme.palette.text.secondary,
-            fontSize: { xs: "2.5rem", md: "4.5rem" },
-            mt: 25,
-            textAlign: "right",
+            mt: { xs: 10, md: 25 },
+            textAlign: { xs: "center", md: "right" },
+            lineHeight: 1.1,
           }}
         >
           from startup to industry leaders
@@ -93,7 +91,7 @@ const Hero = () => {
         }}
         style={{
           position: "absolute",
-          top: "45%",
+          top: "42%",
           left: 0,
           width: "100%", // Maintain full width for the animation
           whiteSpace: "nowrap",
@@ -103,7 +101,7 @@ const Hero = () => {
         <Typography
           sx={{
             fontSize: "6vw",
-            fontWeight: 600,
+            fontWeight: 500,
             color: "transparent",
             WebkitTextStroke: `2px ${theme.palette.primary.main}`,
             letterSpacing: "-0.02em",

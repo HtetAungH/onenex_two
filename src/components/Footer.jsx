@@ -21,10 +21,10 @@ const Footer = ({ sx, ...other }) => (
       {
         bgcolor: "primary.main",
         color: "text.white",
-        pt: 12,
+        pt: { xs: 8, md: 12 },
         pb: 4,
         px: { xs: 4, md: 10 },
-        minHeight: "100vh",
+        minHeight: { xs: "auto", md: "100vh" },
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -36,12 +36,12 @@ const Footer = ({ sx, ...other }) => (
       sx={{
         display: "flex",
         justifyContent: "space-between",
-        mb: 10,
+        mb: { xs: 6, md: 10 },
         flexWrap: "wrap",
         gap: 4,
       }}
     >
-      <Typography variant="h2" sx={{ maxWidth: "70%" }}>
+      <Typography variant="h2" sx={{ maxWidth: { xs: "100%", md: "70%" } }}>
         WE ARE YOUR PARTNER FOR INNOVATION & GROWTH
       </Typography>
       <Box>
@@ -52,7 +52,7 @@ const Footer = ({ sx, ...other }) => (
           sx={{
             borderColor: "border.whiteMuted",
             borderRadius: 0,
-            px: 3,
+            px: { xs: 2, md: 3 },
             py: 1.5,
             "&:hover": {
               borderColor: "text.white",
@@ -65,15 +65,15 @@ const Footer = ({ sx, ...other }) => (
       </Box>
     </Box>
 
-    <Grid container spacing={4} sx={{ mb: 15 }}>
+    <Grid container spacing={6} sx={{ mb: { xs: 6, md: 15 } }}>
       <Grid size={{ xs: 12, sm: 6, md: 3 }}>
         <Typography
           variant="overline"
-          sx={{ color: "text.whiteMuted", display: "block", mb: 3 }}
+          sx={{ color: "text.whiteMuted", display: "block", mb: 2 }}
         >
           WE ONENEX
         </Typography>
-        <Stack spacing={2}>
+        <Stack spacing={1.5}>
           {["Cases", "Contact us", "Services"].map((t) => (
             <Link
               key={t}
@@ -81,6 +81,7 @@ const Footer = ({ sx, ...other }) => (
               sx={{
                 color: "text.white",
                 textDecoration: "none",
+                fontSize: "1rem",
                 "&:hover": { opacity: 0.8 },
               }}
             >
@@ -93,11 +94,11 @@ const Footer = ({ sx, ...other }) => (
       <Grid size={{ xs: 12, sm: 6, md: 3 }}>
         <Typography
           variant="overline"
-          sx={{ color: "text.whiteMuted", display: "block", mb: 3 }}
+          sx={{ color: "text.whiteMuted", display: "block", mb: 2 }}
         >
           WE OFFER
         </Typography>
-        <Stack spacing={2}>
+        <Stack spacing={1.5}>
           {[
             "UI/UX Development",
             "Web Development",
@@ -110,6 +111,7 @@ const Footer = ({ sx, ...other }) => (
               sx={{
                 color: "text.white",
                 textDecoration: "none",
+                fontSize: "1rem",
                 "&:hover": { opacity: 0.8 },
               }}
             >
@@ -119,10 +121,10 @@ const Footer = ({ sx, ...other }) => (
         </Stack>
       </Grid>
 
-      <Grid size={{ xs: 12, sm: 6, md: 3 }} sx={{ ml: { md: "auto" } }}>
+      <Grid size={{ xs: 12, md: 3 }} sx={{ ml: { md: "auto" } }}>
         <Typography
           variant="overline"
-          sx={{ color: "text.whiteMuted", display: "block", mb: 3 }}
+          sx={{ color: "text.whiteMuted", display: "block", mb: 2 }}
         >
           FOLLOW US
         </Typography>
@@ -135,11 +137,11 @@ const Footer = ({ sx, ...other }) => (
                   bgcolor: "text.white",
                   color: "primary.main",
                   "&:hover": { bgcolor: "rgba(255,255,255,0.9)" },
-                  height: 40,
-                  width: 40,
+                  height: 48,
+                  width: 48,
                 }}
               >
-                <Icon fontSize="small" />
+                <Icon fontSize="medium" />
               </IconButton>
             ),
           )}
@@ -154,13 +156,14 @@ const Footer = ({ sx, ...other }) => (
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        flexWrap: "wrap",
-        gap: 2,
+        flexDirection: { xs: "column", sm: "row" },
+        textAlign: { xs: "center", sm: "left" },
+        gap: 3,
         opacity: 0.7,
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography variant="h4" sx={{ letterSpacing: -1 }}>
+        <Typography variant="h4" sx={{ letterSpacing: -1, fontWeight: 900 }}>
           onenex
         </Typography>
       </Box>

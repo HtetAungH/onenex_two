@@ -38,9 +38,7 @@ const LongHaul = () => {
             <Typography
               variant="h3"
               sx={{
-                fontWeight: 700,
                 color: "common.black",
-
                 lineHeight: 1.2,
               }}
             >
@@ -62,7 +60,6 @@ const LongHaul = () => {
               variant="h6"
               sx={{
                 color: "common.black",
-                fontWeight: 600,
                 mb: 4,
               }}
             >
@@ -75,7 +72,6 @@ const LongHaul = () => {
               <Typography
                 variant="h2"
                 sx={{
-                  fontWeight: 700,
                   color: "primary.main",
                   mb: 1,
                 }}
@@ -108,7 +104,6 @@ const LongHaul = () => {
             <Typography
               variant="h3"
               sx={{
-                fontWeight: 700,
                 color: "common.black",
                 lineHeight: 1.2,
               }}
@@ -131,7 +126,6 @@ const LongHaul = () => {
               variant="h6"
               sx={{
                 color: "common.black",
-                fontWeight: 600,
                 mb: 1,
               }}
             >
@@ -141,7 +135,6 @@ const LongHaul = () => {
               variant="h6"
               sx={{
                 color: "common.black",
-                fontWeight: 600,
                 mb: 4,
               }}
             >
@@ -153,7 +146,6 @@ const LongHaul = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontWeight: 700,
                     color: "primary.main",
                     mb: 1,
                   }}
@@ -175,10 +167,8 @@ const LongHaul = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontWeight: 700,
                     color: "primary.main",
                     mb: 1,
-                    fontSize: "3.5rem",
                   }}
                 >
                   <Counter to={124} suffix="+" delay={0.8} />
